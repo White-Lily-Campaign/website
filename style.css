@@ -91,6 +91,13 @@ section, aside {
   align-items: center;
 }
 
+video {
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  margin-top: 4rem;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -100,13 +107,16 @@ ul li {
   list-style-type: none;
 }
 
-#learn-more ul li {
+ul#statistics {
+  margin-bottom: 4rem;
+}
+ul#statistics li {
   padding: .25rem ;
   margin: 0 0 .5rem 0;
   background-color: #E7E9E6;
   transition: background-color .25s ease-in-out;
 }
-#learn-more ul li:hover {
+ul#statistics li:hover {
   background-color: #DDC9F5;
 }
 
@@ -116,6 +126,7 @@ figure {
   height: 60vh;
   width: 100%;
   max-width: 50rem;
+  margin: 0 auto 1rem auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -140,6 +151,7 @@ figure div:hover {
 figcaption {
   width: 100%;
   max-width: 50rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   border: 1px solid;
