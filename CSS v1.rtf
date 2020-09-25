@@ -1,0 +1,376 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @font-face \{\
+  font-family: 'junicoderegular';\
+  src:\
+    url('junicode-regular-webfont.woff2') format('woff2'),\
+    url('junicode-regular-webfont.woff') format('woff');\
+  font-weight: normal;\
+  font-style: normal;\
+  font-display: swap;\
+\}\
+\
+@font-face \{\
+  font-family: 'junicodebold';\
+  src:\
+    url('junicode-bold-webfont.woff2') format('woff2'),\
+    url('junicode-bold-webfont.woff') format('woff');\
+  font-weight: normal;\
+  font-style: normal;\
+  font-display: swap;\
+\}\
+\
+\
+* \{\
+  box-sizing: border-box;\
+  color: black;\
+  transition: color 3s ease;\
+  font-family: 'junicodebold';\
+\}\
+\
+.animate \{\}\
+\
+html \{\
+  background-color: #FAF8F0;\
+  height: 100%;\
+  width: 100%;\
+  margin: 0;\
+  padding: 0;\
+  scroll-behavior: smooth;\
+  -webkit-text-size-adjust: 100%;\
+  font-size: 16px;\
+\}\
+\
+body \{\
+  max-width: 66rem;\
+  margin: 0 auto;\
+  padding: 2rem;\
+  overflow-x: hidden;\
+  display: flex;\
+  flex-direction: column;\
+  justify-content: space-between;\
+  align-items: center;\
+\}\
+\
+/* span \{\
+  position: fixed;\
+  top: 0;\
+  left: 0;\
+  width: 0%;\
+  margin: 0 auto;\
+  height: 8px;\
+  background-color: #DDC9F5;\
+  z-index: 99;\
+  transition: background-color 0.2s;\
+\}\
+*/\
+header \{\
+  min-height: calc(100vh - 4rem);\
+  padding: 2rem 0;\
+  display: flex;\
+  flex-direction: column;\
+  justify-content: space-between;\
+\}\
+\
+.button-container \{\
+  margin: 0 auto;\
+  width: 100%;\
+  max-width: 25rem;\
+  display: flex;\
+  justify-content: space-between;\
+\}\
+\
+button \{\
+  border: 2px solid;\
+  width: 11rem;\
+  margin: 0;\
+  padding: 8px;\
+  background-color: transparent;\
+  text-align: center;\
+  box-shadow: 3px 3px;\
+  transition: box-shadow .1s ease-in-out;\
+  transition: background-color .25s ease-in-out;\
+\}\
+\
+button:hover \{\
+  box-shadow: 4px 4px;\
+  cursor: pointer;\
+  background-color: #DDC9F5;\
+\}\
+\
+section, aside \{\
+  width: 100%;\
+  max-width: 50rem;\
+  min-height: 100vh;\
+  padding: 2rem 0;\
+  display: flex;\
+  flex-direction: column;\
+  justify-content: center;\
+  align-items: center;\
+\}\
+\
+video \{\
+  width: 100%;\
+  max-width: 50rem;\
+  height: auto;\
+  margin-top: 4rem;\
+\}\
+\
+ul \{\
+  list-style-type: none;\
+  margin: 0;\
+  padding: 0;\
+\}\
+\
+ul li \{\
+  list-style-type: none;\
+\}\
+\
+ul#statistics \{\
+  margin-bottom: 4rem;\
+\}\
+\
+ul#statistics li \{\
+  padding: .25rem;\
+  margin: 0 0 .5rem 0;\
+  background-color: #E7E9E6;\
+  transition: background-color .25s ease-in-out;\
+\}\
+\
+ul#statistics li:hover \{\
+  background-color: #DDC9F5;\
+\}\
+\
+figure \{\
+  background-color: #E7E9E6;\
+  min-height: 30rem;\
+  height: 60vh;\
+  width: 100%;\
+  max-width: 50rem;\
+  margin: 0 auto 1rem auto;\
+  display: flex;\
+  justify-content: space-between;\
+  align-items: flex-end;\
+  border: 1px solid;\
+\}\
+\
+figure div \{\
+  display: inline-block;\
+  position: relative;\
+  bottom: 0;\
+  left: 0;\
+  width: 20%;\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  transition: background-color .25s ease-in-out;\
+\}\
+\
+figure div:hover \{\
+  background-color: #DDC9F5 !important;\
+\}\
+\
+figcaption \{\
+  width: 100%;\
+  max-width: 50rem;\
+  margin: 0 auto;\
+  display: flex;\
+  justify-content: space-between;\
+  border: 1px solid;\
+\}\
+\
+figcaption span \{\
+  width: 18%;\
+  text-align: center;\
+  padding: .5rem 0;\
+  line-height: 1;\
+  display: flex;\
+  flex-direction: column;\
+  justify-content: space-around;\
+\}\
+\
+aside \{\
+  width: 100%;\
+  max-width: 50rem;\
+  padding: 4rem 0;\
+\}\
+\
+.toggler \{\
+  width: 100%;\
+  display: inline-flex;\
+  justify-content: space-between;\
+  cursor: pointer;\
+\}\
+\
+.toggler:after \{\
+  content: url(images/hamburger.svg);\
+  content: '+';\
+\}\
+\
+.open .toggler:after \{\
+  content: url(images/up-arrow.svg);\
+  content: '-';\
+\}\
+\
+.panel \{\
+  display: flex;\
+  flex-direction: column;\
+  max-height: 0;\
+  overflow: hidden;\
+  transition: all 0.5s;\
+  padding: 1rem 0 0 0;\
+  margin: 0;\
+  border-bottom: 1px solid;\
+\}\
+\
+.panel p \{\
+  padding-bottom: 1rem;\
+\}\
+\
+footer \{\
+  padding: 1rem 0 0 0;\
+  margin: 0;\
+  width: 100%;\
+  max-width: 50rem;\
+  height: 100%;\
+  padding: 0;\
+  display: flex;\
+  justify-content: space-between;\
+  align-items: baseline;\
+\}\
+\
+img \{\
+  object-fit: contain;\
+  object-position: center;\
+  width: 100%;\
+  min-height: 24rem;\
+  height: min(56vh, 46rem);\
+  padding-top: min(8.5vmin, 5rem);\
+  padding-bottom: min(8.5vmin, 5rem);\
+  padding-left: 2rem;\
+  padding-right: 2rem;\
+  filter: grayscale(1) brightness(.35);\
+  transition: filter 1.2s;\
+\}\
+\
+img.animate \{\
+  filter: grayscale(0) brightness(1);\
+\}\
+\
+::selection \{\
+  background-color: #DDC9F5;\
+\}\
+\
+h1,\
+h2,\
+.toggler,\
+p,\
+figcaption,\
+a,\
+small,\
+strong \{\
+  padding: 0;\
+  margin: 0;\
+  text-rendering: optimizeLegibility;\
+  font-kerning: normal;\
+  text-decoration: none;\
+  text-align: justify;\
+  line-height: 1.4;\
+  font-size: 1rem;\
+  font-family: 'junicoderegular', serif;\
+\}\
+\
+h1,\
+h2,\
+strong \{\
+  font-family: 'junicodebold';\
+\}\
+\
+h1 \{\
+  font-size: 1.25rem;\
+  line-height: .8;\
+  margin-bottom: .6rem;\
+  text-align: center;\
+\}\
+\
+header h1 \{\
+  font-size: 60px;\
+  font-size: min(7.5vw, 100px);\
+\}\
+\
+header h1.scrolled \{\}\
+\
+h2 \{\
+  max-width: 50rem;\
+  max-width: 37.5rem;\
+  font-size: 1.7rem;\
+  line-height: 1.2;\
+  text-align: center;\
+  margin: 0 auto;\
+  padding: 2rem 0 1rem 0;\
+\}\
+\
+header h2 \{\
+  padding: 2rem 0;\
+  cursor: pointer;\
+\}\
+\
+header h2 span,\
+#learn-more p strong \{\
+  background-color: transparent;\
+  transition: background-color 1s ease-in-out;\
+\}\
+\
+header h2:hover span,\
+#learn-more p:hover strong \{\
+  background-color: #DDC9F5;\
+\}\
+\
+header h2:hover,\
+#learn-more p:hover \{\
+  color: lightgray;\
+\}\
+\
+.toggler \{\
+  padding: 1rem 0 0 0;\
+\}\
+\
+small \{\
+  font-size: 0.8rem;\
+\}\
+\
+p \{\
+  font-size: 1.1rem;\
+  max-width: 50rem;\
+\}\
+\
+strong \{\
+  line-height: 0;\
+\}\
+\
+\
+@media (prefers-color-scheme: dark) \{\
+  html \{\
+    background-color: #28272B;\
+  \}\
+\
+  * \{\
+    color: #B3C4DE;\
+    color: #E8EBF1;\
+  \}\
+\
+  ::selection \{\
+    color: black;\
+    background: #B3C4DE;\
+  \}\
+\
+  img \{\
+    background-color: #B3C4DE;\
+  \}\
+\}\
+}
