@@ -40,7 +40,7 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 0;
+  padding: 0rem;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -51,8 +51,11 @@ body {
 header {
   width: 100%;
   max-height: 6rem;
-  border: 2px solid;
+  border: 1px solid;
+  border-top: 2px solid;
+  border-bottom: 1px solid;
   padding: 2rem;
+  margin-bottom: 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,50 +87,36 @@ button:hover {
   background-color: #1973EF;
 }
 
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: calc(100vh - 6rem) 100vh 100vh;
+  grid-gap: 0;
+}
+
 section {
-  width: 100vw;
-  min-height: 100vh;
-  padding: 2rem 0;
+  border: 1px solid;
+  padding: 2rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-section#s1 {
-  padding: 0;
-  margin: 0;
-  min-height: 94vh;
-  max-height: 94vh;
-  min-width: 100vh;
-  background-color: #1973EF;
-  overflow: hidden;
+main:first-of-type {
+
 }
+
 video {
-  min-width: 100vh;
-  max-height: 110vh;
+  width: 100%;
+  height: auto;
 }
 
 
-section#s2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
-}
 
-section#s2 div {
-  width: calc(50vw - 3rem);
-  height: calc(100vh - 4rem);
-  border: 2px solid;
-  background-color: #F2F2F2;
-  padding: 2rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 ul {
   list-style-type: none;
@@ -242,12 +231,11 @@ aside {
 }
 
 footer {
-  padding: 1rem 0 0 0;
-  margin: 0;
+  padding: 1rem 2rem;
+  border: 2px solid;
+  border-top: 1px solid;
   width: 100%;
-  max-width: 50rem;
   height: 100%;
-  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -321,10 +309,9 @@ h2 {
   padding: 2rem 0 1rem 0;
 }
 
-section#s2 div:first-of-type h2 {
+#s1:first-of-type h2 {
 color: #1973EF;
 max-width: 82vw;
-font-size: min(5.5vw, 60px);
 }
 
 .toggler {
