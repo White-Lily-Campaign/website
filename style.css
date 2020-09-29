@@ -41,7 +41,7 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -49,28 +49,25 @@ body {
   align-items: center;
 }
 
-section {
+header {
   width: 100%;
-  min-height: 100vh;
-  padding: 2rem 0;
+  max-height: 6rem;
+  border: 2px solid;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  align-content: center;
+  vertical-align: middle;
 }
 
-section#s1 {
-  justify-content: space-between;
-  padding: 3rem 0;
-}
-
-.button-container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 25rem;
+div.button-container {
+  max-width: 24rem;
+  width: 24rem;
   display: flex;
   justify-content: space-between;
 }
+
 button {
   border: 2px solid;
   width: 11rem;
@@ -88,19 +85,44 @@ button:hover {
   background-color: #DDC9F5;
 }
 
+section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#s1 {
+  padding: 0;
+  margin: 0;
+  min-height: 94vh;
+  max-height: 94vh;
+  min-width: 100vh;
+  background-color: pink;
+  overflow: hidden;
+}
 video {
-  width: 100%;
-  max-width: 50rem;
-  height: auto;
-  margin-top: 4rem;
+  min-width: 100vh;
+  max-height: 110vh;
 }
 
 
+section#s2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
 section#s2 div {
-  width: 100%;
-  flex-grow: 1;
+  width: calc(50vw - 3rem);
+  height: calc(100vh - 4rem);
   border: 2px solid;
   background-color: #DDC9F5;
+  padding: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -285,9 +307,10 @@ h1 {
   text-align: center;
 }
 
-section#s1 h1 {
-  font-size: 60px;
-  font-size: min(7.5vw, 100px);
+header h1 {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
 h2 {
