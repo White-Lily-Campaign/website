@@ -22,14 +22,13 @@
 * {
   box-sizing: border-box;
   color: black;
-  transition: color 3s ease;
   font-family: 'junicodebold';
 }
 
 .animate {}
 
 html {
-  background-color: #FAF8F0;
+  background-color: white;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -82,7 +81,7 @@ button {
 button:hover {
   box-shadow: 4px 4px;
   cursor: pointer;
-  background-color: #DDC9F5;
+  background-color: #1973EF;
 }
 
 section {
@@ -101,7 +100,7 @@ section#s1 {
   min-height: 94vh;
   max-height: 94vh;
   min-width: 100vh;
-  background-color: pink;
+  background-color: #1973EF;
   overflow: hidden;
 }
 video {
@@ -121,7 +120,7 @@ section#s2 div {
   width: calc(50vw - 3rem);
   height: calc(100vh - 4rem);
   border: 2px solid;
-  background-color: #DDC9F5;
+  background-color: #F2F2F2;
   padding: 2rem;
 
   display: flex;
@@ -148,12 +147,12 @@ ul#statistics {
 ul#statistics li {
   padding: .25rem;
   margin: 0 0 .5rem 0;
-  background-color: #E7E9E6;
+  background-color: lightgray;
   transition: background-color .25s ease-in-out;
 }
 
 ul#statistics li:hover {
-  background-color: #DDC9F5;
+  color: #1973EF;
 }
 
 figure {
@@ -322,7 +321,8 @@ h2 {
   padding: 2rem 0 1rem 0;
 }
 
-section#s2 h2 {
+section#s2 div:first-of-type h2 {
+color: #1973EF;
 max-width: 82vw;
 font-size: min(5.5vw, 60px);
 }
