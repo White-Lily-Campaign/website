@@ -1,31 +1,13 @@
-@font-face {
-  font-family: 'junicoderegular';
-  src:
-    url('junicode-regular-webfont.woff2') format('woff2'),
-    url('junicode-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@font-face {
-  font-family: 'junicodebold';
-  src:
-    url('junicode-bold-webfont.woff2') format('woff2'),
-    url('junicode-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
+#color { #1973EF; }
 
 * {
   box-sizing: border-box;
   color: black;
-  font-family: 'junicodebold';
+  font-family: 'Arimo', sans-serif;
 }
-
-.animate {}
 
 html {
   background-color: white;
@@ -40,7 +22,8 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 0rem;
+  padding: 3rem 2rem 1rem 2rem;
+  max-width: 112rem;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -50,74 +33,72 @@ body {
 
 header {
   width: 100%;
-  max-height: 6rem;
-  border: 1px solid;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  padding: 2rem;
-  margin-bottom: 0rem;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  vertical-align: middle;
-
-  z-index: 99;
-  position: fixed;
-  background-color: white;
+  align-items: flex-end;
 }
-
 div.button-container {
-  max-width: 24rem;
-  width: 24rem;
   display: flex;
   justify-content: space-between;
+  padding-bottom: .6rem;
 }
-
 button {
-  border: 2px solid;
-  width: 11rem;
-  margin: 0;
+  border: 2px solid black;
+  width: 8rem;
   padding: 8px;
-  background-color: transparent;
+  color: white;
+  font-weight: 800;
+  background-color: #1973EF;
   text-align: center;
-  box-shadow: 3px 3px;
+  box-shadow: 3px 3px black;
   transition: box-shadow .1s ease-in-out;
   transition: background-color .25s ease-in-out;
 }
 button:hover {
-  box-shadow: 4px 4px;
+  box-shadow: 4px 4px black;
   cursor: pointer;
   background-color: #1973EF;
 }
 
-main {
-  margin-top: 6rem;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-}
-
 section {
-  border: 1px solid;
-  padding: 2rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-section:nth-of-type(-n+2) {
-  border-top: none;
+
+
+section#s1 {
+  height: calc(100vh - 16rem);
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
 }
 
-video {
-  width: 100%;
-  height: auto;
+.video-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  background-color: gray;
 }
+video {
+  min-width: 100%;
+  max-height: 100%;
+}
+
+section#s1 div:nth-of-type(2) {
+  height: 100%;
+  justify-content: flex-start;
+  padding: 0 2rem;
+}
+
 
 
 
@@ -128,22 +109,18 @@ ul {
   padding: 0;
   max-width: 50rem;
 }
-
 ul li {
   list-style-type: none;
 }
-
 ul#statistics {
   margin-bottom: 4rem;
 }
-
 ul#statistics li {
   padding: .25rem;
   margin: 0 0 .5rem 0;
   background-color: lightgray;
   transition: background-color .25s ease-in-out;
 }
-
 ul#statistics li:hover {
   color: #1973EF;
 }
@@ -160,7 +137,6 @@ figure {
   align-items: flex-end;
   border: 1px solid;
 }
-
 figure div {
   display: inline-block;
   position: relative;
@@ -172,11 +148,9 @@ figure div {
   align-items: center;
   transition: background-color .25s ease-in-out;
 }
-
 figure div:hover {
   background-color: #DDC9F5 !important;
 }
-
 figcaption {
   width: 100%;
   max-width: 50rem;
@@ -185,7 +159,6 @@ figcaption {
   justify-content: space-between;
   border: 1px solid;
 }
-
 figcaption span {
   width: 18%;
   text-align: center;
@@ -201,24 +174,20 @@ aside {
   max-width: 50rem;
   padding: 4rem 0;
 }
-
 .toggler {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
   cursor: pointer;
 }
-
 .toggler:after {
   content: url(images/hamburger.svg);
   content: '+';
 }
-
 .open .toggler:after {
   content: url(images/up-arrow.svg);
   content: '-';
 }
-
 .panel {
   display: flex;
   flex-direction: column;
@@ -229,15 +198,12 @@ aside {
   margin: 0;
   border-bottom: 1px solid;
 }
-
 .panel p {
   padding-bottom: 1rem;
 }
 
 footer {
-  padding: 1rem 2rem;
-  border: 2px solid;
-  border-top: 1px solid;
+  padding: 1rem 0 0 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -258,7 +224,6 @@ img {
   filter: grayscale(1) brightness(.35);
   transition: filter 1.2s;
 }
-
 img.animate {
   filter: grayscale(0) brightness(1);
 }
@@ -283,22 +248,17 @@ strong {
   text-align: justify;
   line-height: 1.4;
   font-size: 1rem;
-  font-family: 'junicoderegular', serif;
-}
-
-h1,
-strong {
-  font-family: 'junicodebold';
+  font-family: 'Arimo', sans-serif;
 }
 
 h1 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: .8;
-  margin-bottom: .6rem;
-  text-align: center;
+  text-align: left;
+  font-weight: 800;
 }
-
 header h1 {
+  font-size: 2.5rem;
   line-height: 1;
   padding: 0;
   margin: 0;
@@ -312,10 +272,17 @@ h2 {
   margin: 0 auto;
   padding: 2rem 0 1rem 0;
 }
+#s1 h2 {
+  color: #1973EF;
+  text-align: left;
+  padding-top: 0;
+  margin-top: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
 
-#s1:first-of-type h2 {
-color: #1973EF;
-max-width: 82vw;
+button {
+  font-size: 1rem;
 }
 
 .toggler {
