@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-#color { #1973EF; }
-
 * {
   box-sizing: border-box;
   color: black;
@@ -10,64 +8,90 @@
 }
 
 html {
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-  font-size: 16px;
+  min-height: 100vh;
+  max-width: 100vw;
+ overflow-x: hidden;
+ overflow-y: scroll;
+ scroll-snap-type: mandatory;
+ scroll-snap-type: y mandatory;
+ scroll-snap-points-y: repeat(100vh);
+ -webkit-overflow-scrolling: touch;
+ scroll-behavior: smooth;
+
+ margin: 0;
+ padding: 0;
+ font-size: 16px;
+ -webkit-text-size-adjust: 100%;
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @media {
+    body {
+      overflow-x: hidden;
+      min-height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: mandatory;
+      scroll-snap-type: y mandatory;
+      scroll-snap-points-y: repeat(100vh);
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 body {
-  margin: 0 auto;
-  padding: 3rem 2rem 1rem 2rem;
-  max-width: 112rem;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-div.button-container {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: .6rem;
-}
-button {
-  border: 2px solid black;
-  width: 8rem;
-  padding: 8px;
-  color: white;
-  font-weight: 800;
-  background-color: #1973EF;
-  text-align: center;
-  box-shadow: 3px 3px black;
-  transition: box-shadow .1s ease-in-out;
-  transition: background-color .25s ease-in-out;
-}
-button:hover {
-  box-shadow: 4px 4px black;
-  cursor: pointer;
-  background-color: #1973EF;
+  margin: 0;
+  padding: 0;
 }
 
 section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ min-height: 100%;
+ min-height: 100vh;
+ scroll-snap-align: start;
+ scroll-snap-stop: always;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
 section#s1 {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: #D5AE46;
 }
+#s1 h2 {
+  text-align: left;
+  padding: 2rem 3rem;
+
+  max-width: 100%;
+  font-size: min(6vw, 9.6vh);
+  line-height: 1.1;
+}
+#s1 h2 span {
+  text-decoration: underline;
+}
+
+nav {
+  background-color: ;
+  border-top: 8px solid;
+  min-height: 14rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a {
+  font-size: 2vw;
+  font-weight: 600;
+  cursor: pointer;
+}
+nav a:hover {
+  color: #5A6A98;
+}
+
 .video-container {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,40 +101,12 @@ section#s1 {
   background-color: gray;
 }
 video {
-  min-width: 100%;
-  max-height: 100%;
-}
-section#s1 div:nth-of-type(2) {
-  height: 100%;
-  justify-content: flex-start;
-  padding: 0 2rem;
+  width: 90%;
+  max-height: 90%;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  max-width: 50rem;
-}
-ul li {
-  list-style-type: none;
-}
-ul#statistics {
-  margin-bottom: 4rem;
-}
-ul#statistics li {
-  padding: .25rem;
-  margin: 0 0 .5rem 0;
-  background-color: lightgray;
-  transition: background-color .25s ease-in-out;
-}
-ul#statistics li:hover {
-  color: #1973EF;
-}
-
-section#s2 {
-  min-height: 100vh;
-  background-color: ;
+section#s3 {
+  background-color: #969B75;
 }
 figure {
   background-color: #E7E9E6;
@@ -156,10 +152,39 @@ figcaption span {
   justify-content: space-around;
 }
 
+section#s4 {
+  background-color: #EDBCAC;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: 50rem;
+}
+ul li {
+  list-style-type: none;
+}
+ul#statistics {
+  margin-bottom: 4rem;
+}
+ul#statistics li {
+  padding: .25rem;
+  margin: 0 0 .5rem 0;
+  background-color: #D5D5DF;
+  transition: background-color .25s ease-in-out;
+}
+ul#statistics li:hover {
+  color: #1973EF;
+}
+
+section#s5 {
+  background-color: #B5B8BE;
+}
 aside {
   width: 100%;
   max-width: 50rem;
   padding: 4rem 0;
+  min-height: 500px;
 }
 .toggler {
   width: 100%;
@@ -258,20 +283,6 @@ h2 {
   text-align: center;
   margin: 0 auto;
   padding: 2rem 0 1rem 0;
-}
-#s1 h2 {
-  text-align: left;
-  padding-top: 0;
-  margin-top: 0;
-  padding-left: 0;
-  margin-left: 0;
-}
-#s1 h2 span {
-  color: #1973EF;
-}
-
-button {
-  font-size: 1rem;
 }
 
 .toggler {
