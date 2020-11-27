@@ -90,23 +90,26 @@ video {
 
 section#s3 h2 {
   padding-bottom: 1rem;
+  font-weight: 600;
+  font-style: italic;
 }
 
 figure {
   background-color: #E7E9E6;
-  height: 100%;
+  height: 28rem;
   width: 100%;
   margin-bottom: 1rem;
   display: flex;
+  padding: 0;
   align-items: flex-end;
   border: 1px solid;
+  margin-top: 0;
 }
 
 figure div {
-  bottom: 0;
-  left: 0;
   max-width: 20%;
   transition: background-color .25s ease-in-out;
+  padding: 0 !important;
 }
 
 figure div:hover {
@@ -157,7 +160,11 @@ ul li:hover {
 section#s4 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+
+  background-color: #F6F6F6;
+  min-height: 24rem;
+  margin-bottom: 2rem;
 }
 
 .form-container {
@@ -214,6 +221,7 @@ form input#submit {
   padding: 0;
   transition: .2s background-color ease-in-out;
   max-width: 25%;
+  margin: 0 auto;
 }
 
 form #submit:hover {
@@ -324,6 +332,10 @@ strong {
 
   section#s1 {
     margin-bottom: 1rem;
+  }
+
+  section#s3 {
+    margin-top: 1rem;
   }
 
   section#s3 div {
