@@ -89,10 +89,9 @@ video {
   padding: 0 2rem;
 }
 
-section#s3 h2 {
+section#s3 h1 {
+  padding-top: 0;
   padding-bottom: 1rem;
-  font-weight: 600;
-  font-style: italic;
 }
 
 section#s3 div {
