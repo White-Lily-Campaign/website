@@ -162,13 +162,20 @@ section#s4 {
   flex-direction: column;
   justify-content: center;
 
-  background-color: #F6F6F6;
+  background-color: #E1EFF1;
   min-height: 24rem;
   margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+section#s4 h2 {
+  padding-top: .5rem;
 }
 
 .form-container {
   width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,6 +236,12 @@ form #submit:hover {
   background-color: black;
   border-color: black;
   color: white;
+}
+
+form h2 {
+  display: block;
+  width: 100%;
+  padding-top: .5rem;
 }
 
 footer {
