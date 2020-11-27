@@ -365,25 +365,25 @@ strong {
   }
 
   .form-container {
-  align-items: center;
-  padding: 0 1rem;
-}
+    align-items: center;
+    padding: 0 1rem;
+  }
 
-form input {
+  form input {
   max-width: 100%;
   margin: 12px 0;
 }
 
-form input#submit {
-  min-width: 100%;
-}
+  form input#submit {
+    min-width: 100%;
+  }
 
   img {
     max-width: 100%;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   article {
