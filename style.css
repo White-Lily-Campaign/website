@@ -95,6 +95,11 @@ section#s3 h2 {
   font-style: italic;
 }
 
+section#s3 div {
+  margin: 0 auto;
+  width: 100%;
+}
+
 figure {
   background-color: #E7E9E6;
   height: 28rem;
@@ -156,6 +161,13 @@ ul li {
 
 ul li:hover {
   color: #1973EF;
+}
+
+article h3 {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-weight: 500;
 }
 
 section#s4 {
