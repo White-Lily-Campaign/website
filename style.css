@@ -346,7 +346,8 @@ strong {
 
   section#s2 div:last-of-type,
   section#s3 div:first-of-type,
-  article {
+  article,
+  nav {
     display: none;
   }
 
