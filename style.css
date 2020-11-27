@@ -8,7 +8,6 @@
 
 html {
   overflow-x: hidden;
-  overflow-y: scroll;
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -22,7 +21,6 @@ body {
 
 header {
   padding: .75rem 0;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,13 +32,11 @@ header h3:first-of-type {
   text-transform: uppercase;
 }
 
-section {
+section#s1,
+section#s2,
+section#s3 {
   width: 100%;
   margin-bottom: 2rem;
-}
-
-section#s1,
-section#s2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,12 +44,12 @@ section#s2 {
 }
 
 section#s1 div,
-section#s2 div {
+section#s2 div,
+section#s3 div {
   width: calc(50% - .5rem);
   height: 28rem;
   background-color: #E1EFF1;
   padding: 1rem 2rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +59,6 @@ section#s2 div {
 img {
   object-fit: cover;
   object-position: center;
-
   height: 28rem;
   max-width: calc(50% - .5rem);
   transition: filter 1.2s;
@@ -93,44 +88,31 @@ video {
   padding: 2rem;
 }
 
-section#s3 {
-  background-color: #E1EFF1;
-  height: 90vh;
-  min-height: 42rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 section#s3 h2 {
   padding-bottom: 1rem;
 }
+
 figure {
   background-color: #E7E9E6;
-  min-height: 30rem;
-  height: 60vh;
+  height: 100%;
   width: 100%;
-  max-width: 50rem;
-  margin: 0 auto 1rem auto;
+  margin-bottom: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
   border: 1px solid;
 }
+
 figure div {
-  display: inline-block;
-  position: relative;
   bottom: 0;
   left: 0;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 20%;
   transition: background-color .25s ease-in-out;
 }
+
 figure div:hover {
   background-color: #DDC9F5 !important;
 }
+
 figcaption {
   width: 100%;
   max-width: 50rem;
@@ -139,6 +121,7 @@ figcaption {
   justify-content: space-between;
   border: 1px solid;
 }
+
 figcaption span {
   width: 18%;
   text-align: center;
@@ -151,48 +134,27 @@ figcaption span {
   justify-content: space-around;
 }
 
-section#s4 {
-  background-color: #F6F6F6;
-  height: 90vh;
-  min-height: 42rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 1rem;
-}
-
-section#s4 h2 {
-  padding-bottom: 1rem;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   max-width: 50rem;
 }
+
 ul li {
   list-style-type: none;
   font-size: .75rem;
-}
-ul#statistics {
-  margin-bottom: 4rem;
-}
-ul#statistics li {
   padding: .25rem;
   margin: 0 0 .5rem 0;
   background-color: #D5D5DF;
   transition: background-color .25s ease-in-out;
 }
-ul#statistics li:hover {
+
+ul li:hover {
   color: #1973EF;
 }
 
-
-section.s4 {
-  height: 28rem;
+section#s4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,7 +162,6 @@ section.s4 {
 
 .form-container {
   width: 100%;
-  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +171,7 @@ form {
   width: 50rem;
   padding: 1rem 0;
   max-width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -261,8 +223,6 @@ form #submit:hover {
   color: black;
 }
 
-
-
 footer {
   padding: 1rem 0 0 0;
   width: 100%;
@@ -270,8 +230,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
-
 }
 
 ::selection {
@@ -304,14 +262,12 @@ h1 {
   text-align: center;
   font-weight: 100;
   text-transform: uppercase;
-
 }
 
 h2 {
   font-weight: 300;
   font-size: .75rem;
   line-height: 1.6;
-
   max-width: 30rem;
   text-align: center;
   margin: 0 auto;
@@ -340,39 +296,65 @@ strong {
   line-height: 0;
 }
 
-@media screen and (max-width: 70rem){
-
+@media screen and (max-width: 72rem) {
   body {
-   padding: 0 1.2rem;
+    padding: 0 1.2rem;
   }
 
   section#s1,
-  section#s2 {
+  section#s2,
+  section#s3,
+  section#s4 {
     flex-direction: column;
-    height: 100vh;
     margin-bottom: 0;
   }
 
   section#s1 div,
-  section#s2 div {
+  section#s2 div,
+  section#s3 div {
     width: 100%;
-    max-height: 50%;
     margin-bottom: 1.2rem;
   }
 
-  section#s3 {
+  section#s2 div:last-of-type,
+  section#s3 div:first-of-type,
+  article {
+    display: none;
+  }
+
+  section#s1 {
+    margin-bottom: 1rem;
+  }
+
+  section#s3 div {
     background-color: transparent;
   }
 
+  section#s3 div:last-of-type {
+    height: 100%;
+    padding: 0;
+  }
+
+  section#s3 ul li {
+    background-color: #E1EFF1
+  }
+
+  section#s4 div {
+    padding: 0;
+  }
+
+
+
   .form-container {
     align-items: center;
+    height: auto;
     padding: 0 1rem;
   }
 
   form input {
-  max-width: 100%;
-  margin: 12px 0;
-}
+    max-width: 100%;
+    margin: 12px 0;
+  }
 
   form input#submit {
     min-width: 100%;
@@ -395,8 +377,6 @@ strong {
     max-height: 100%;
     padding: 0;
   }
-
-
 }
 
 @media (prefers-color-scheme: dark) {
